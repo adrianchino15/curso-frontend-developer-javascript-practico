@@ -1,3 +1,5 @@
+/*Estilos generales*/
+
 :root {
     --white: #FFFFFF;
     --black: #000000;
@@ -14,6 +16,7 @@ body {
     font-family: 'Quicksand', sans-serif;
 }
 
+/*navbar*/
 nav {
     display: flex;
     justify-content: space-between;
@@ -86,11 +89,14 @@ nav {
     justify-content: center;
     align-items: center;
 }
+
+/*activar o desactivar funciones*/
 .inactive {
     display: none;
 }
 
 
+/*Menu desktop*/
 .desktop-menu {
     position: absolute;
     background: var(--white);
@@ -135,6 +141,46 @@ nav {
     display: inline-block;
 }
 
+/*Menu para mobil*/
+
+.mobile-menu {
+    top: 60px;
+    position: absolute;
+    padding: 24px;
+}
+
+.mobile-menu a {
+    text-decoration: none;
+    color: var(--black);
+    font-weight: bold;
+    
+    /* margin-bottom: 24px; */
+}
+
+.mobile-menu ul {
+    padding: 0;
+    margin: 24px 0 0;
+    list-style: none;
+}
+
+.mobile-menu ul:nth-child(1) {
+    border-bottom: 1px solid var(--very-light-pink);
+}
+
+.mobile-menu ul li {
+    margin-bottom: 24px;
+}
+
+.email {
+    font-size: var(--sm);
+    font-weight: 300 !important;
+}
+
+.sign-out {
+    font-size: var(--sm);
+    color: var(--hospital-green) !important;
+}
+
 
 
 @media (max-width: 640px) {
@@ -147,6 +193,15 @@ nav {
     }
 
     .navbar-email {
+        display: none;
+    }
+    .desktop-menu{
+        display: none;
+    }
+}
+
+@media(min-width: 641px){
+    .mobile-menu{
         display: none;
     }
 }
